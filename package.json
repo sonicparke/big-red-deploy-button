@@ -11,6 +11,7 @@
   "dependencies": {
     "big-red-button-node-hid-2": "0.0.0",
     "node-curl": "^0.3.3",
+    "node-hid": "^0.3.2",
     "querystring": "^0.2.0",
     "request": "^2.51.0"
   },
