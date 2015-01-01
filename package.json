@@ -20,13 +20,13 @@
   },
   "keywords": [
     "big",
-    "red",
-    "button",
-    "deploy",
-    "hipchat"
-  ],
+  "red",
+  "button",
+  "deploy",
+  "hipchat"
+    ],
   "bugs": {
     "url": "https://github.com/blainesch/big-red-deploy-button/issues"
-},
+  },
   "homepage": "https://github.com/blainesch/big-red-deploy-button"
 }
