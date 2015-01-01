@@ -13,5 +13,6 @@ Now run `coffee src/index.coffee` to get it running!
 Want it to run on startup? Edit the `com.bigred.button.plist` file to point to the correct paths, copy it using the command below, and restart your mac.
 
 ~~~
+launchctl setenv PATH /usr/local/bin:$(launchctl getenv PATH)
 sudo cp ./com.bigred.button.plist /Library/LaunchDaemons/
 ~~~

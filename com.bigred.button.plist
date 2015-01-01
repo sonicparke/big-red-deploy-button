@@ -7,7 +7,6 @@
     <string>com.bigred.button</string>
     <key>ProgramArguments</key>
     <array>
-        <string>PATH=$PATH:/usr/local/bin</string> <!-- node and coffee -->
         <string>coffee</string>
         <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/src/index.coffee</string>
     </array>
