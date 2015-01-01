@@ -1,8 +1,11 @@
 BigRedButton = require("big-red-button-node-hid-2")
 request = require("request")
-data = JSON.parse(require('fs').readFileSync("#{__dirname}/../config.json"))
+fs = require('fs')
 
 class HipChat
+
+  @data: ->
+    JSON.parse(fs.readFileSync("#{__dirname}/../config.json"))
 
   @send: (message, callback) ->
     console.log {message}
@@ -10,7 +13,7 @@ class HipChat
       callback(not error and not body)
 
   @options: (message) ->
-    uri: "https://api.hipchat.com/v2/room/#{data.room}/notification?auth_token=#{data.auth_token}"
+    uri: "https://api.hipchat.com/v2/room/#{@data().room}/notification?auth_token=#{@data().auth_token}"
     method: "POST"
     json:
       message_format: "text"
@@ -20,8 +23,9 @@ class HipChat
 bigRedButton = new BigRedButton.BigRedButton(0)
 
 for type in ['buttonPressed', 'buttonReleased', 'lidClosed', 'lidRaised']
-  bigRedButton.on type, ( (data, type)->
-    if data.messages[type]
-      HipChat.send data.messages[type], (status) ->
+  bigRedButton.on type, ( (type)->
+    data = JSON.parse(fs.readFileSync("#{__dirname}/../config.json"))
+    if message = data.messages[type]
+      HipChat.send message, (status) ->
         console.log {status}
-  ).bind(@, data, type)
+  ).bind(@, type)
