@@ -2,7 +2,7 @@
   "name": "big-red-deploy-button",
   "version": "1.0.0",
   "description": "A real button that deploys our application to production.",
-  "main": "index.coffee",
+  "main": "src/index.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,9 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "big-red-button-node-hid-2": "0.0.0",
-    "node-curl": "^0.3.3",
     "node-hid": "^0.3.2",
-    "querystring": "^0.2.0",
     "request": "^2.51.0"
   },
   "devDependencies": {},
@@ -29,6 +27,6 @@
   ],
   "bugs": {
     "url": "https://github.com/blainesch/big-red-deploy-button/issues"
-  },
+},
   "homepage": "https://github.com/blainesch/big-red-deploy-button"
 }
