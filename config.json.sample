@@ -1,0 +1,10 @@
+{
+  "auth_token": "foo",
+  "room": 123,
+  "messages": {
+    "buttonPressed": "",
+    "buttonReleased": "huboot deploy foo to foo!",
+    "lidRaised": "Ready to deploy?",
+    "lidClosed": ""
+  }
+}

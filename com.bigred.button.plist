@@ -7,12 +7,14 @@
     <string>com.bigred.button</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/big-red-deploy-button</string>
+        <string>export PATH=$PATH:/usr/local/bin</string>
+        <string>coffee</string>
+        <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/src/index.coffee</string>
     </array>
     <key>StandardErrorPath</key>
-    <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/error.log</string>
+    <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/logs/error.log</string>
     <key>StandardOutPath</key>
-    <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/access.log</string>
+    <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/logs/access.log</string>
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>
