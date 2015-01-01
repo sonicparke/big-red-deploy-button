@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.bigred.button</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/big-red-deploy-button</string>
+    </array>
+    <key>StandardErrorPath</key>
+    <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/error.log</string>
+    <key>StandardOutPath</key>
+    <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/access.log</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+</dict>
+</plist>
