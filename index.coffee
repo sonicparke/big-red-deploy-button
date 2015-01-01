@@ -13,7 +13,6 @@ options =
     notify: true
 
 bigRedButton = new BigRedButton.BigRedButton(0)
-console.log process.env.AUTH
 
 # buttonPressed, lidRaised, lidClosed
 bigRedButton.on "buttonReleased", ->
