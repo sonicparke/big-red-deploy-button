@@ -7,8 +7,7 @@
     <string>com.bigred.button</string>
     <key>ProgramArguments</key>
     <array>
-        <string>coffee</string>
-        <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/src/index.coffee</string>
+        <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/bin/button</string>
     </array>
     <key>StandardErrorPath</key>
     <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/logs/error.log</string>

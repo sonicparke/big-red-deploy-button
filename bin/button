@@ -1,3 +1,7 @@
-#!/usr/local/bin/coffee
+#!/bin/bash
 
-require '../src/index'
+export PATH=$PATH:/usr/local/bin
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+coffee "$DIR/../src/index.coffee"
