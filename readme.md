@@ -5,10 +5,13 @@ Now your [Dream Cheeky 902 Big Red Button](http://www.amazon.com/dp/B004D18MCK/r
 
 ## Setup
 
-~~~
-~~~
+Copoy the `config.json.sample` file to `config.json` and fill it out. If a message is blank no message will be sent when that event happens.
 
-## On Startup
+Now run `coffee src/index.coffee` to get it running!
+
+## On Startup (for mac)
+
+Want it to run on startup? Edit the `com.bigred.button.plist` file to point to the correct paths, copy it using the command below, and restart your mac.
 
 ~~~
 sudo cp ./com.bigred.button.plist /Library/LaunchDaemons/
