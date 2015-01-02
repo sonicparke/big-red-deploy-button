@@ -9,7 +9,7 @@
   "author": "Blaine Schmeisser",
   "license": "MIT",
   "dependencies": {
-    "big-red-button-node-hid-2": "0.0.0",
+    "BigRedButtonNodeHID": "git+ssh://git@github.com:blainesch/BigRedButtonNodeHID.git#1.0.0",
     "node-hid": "^0.3.2",
     "request": "^2.51.0"
   },
@@ -20,11 +20,11 @@
   },
   "keywords": [
     "big",
-  "red",
-  "button",
-  "deploy",
-  "hipchat"
-    ],
+    "red",
+    "button",
+    "deploy",
+    "hipchat"
+  ],
   "bugs": {
     "url": "https://github.com/blainesch/big-red-deploy-button/issues"
   },

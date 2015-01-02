@@ -1,4 +1,4 @@
-BigRedButton = require("big-red-button-node-hid-2")
+BigRedButton = require("BigRedButtonNodeHID")
 request = require("request")
 fs = require('fs')
 
@@ -20,12 +20,46 @@ class HipChat
       message: message
       notify: true
 
-bigRedButton = new BigRedButton.BigRedButton(0)
+class Button
 
-for type in ['buttonPressed', 'buttonReleased', 'lidClosed', 'lidRaised']
-  bigRedButton.on type, ( (type)->
-    data = JSON.parse(fs.readFileSync("#{__dirname}/../config.json"))
-    if message = data.messages[type]
+  raw: null
+
+  constructor: (button) ->
+    @raw = button
+    for type in ['buttonPressed', 'buttonReleased', 'lidClosed', 'lidRaised']
+      button.on(type, @action.bind(@, type))
+
+  data: ->
+    JSON.parse(fs.readFileSync("#{__dirname}/../config.json"))
+
+  action: (type) ->
+    if message = @data().messages[type]
       HipChat.send message, (status) ->
         console.log {status}
-  ).bind(@, type)
+
+  dead: ->
+    !@raw.interval
+
+class ButtonManager
+
+  buttons: {}
+
+  find_buttons: =>
+    for i in [0...BigRedButton.deviceCount()]
+      try
+        button = new BigRedButton.BigRedButton(i)
+      catch e
+        continue
+      unless @buttons[button.button.path]
+        console.log 'new button', button.button.path
+        @buttons[button.button.path] = new Button(button)
+
+  find_zombie_buttons: =>
+    for i,button of @buttons
+      console.log 'deleted button' if button.dead()
+      delete @buttons[i] if button.dead()
+
+
+manager = new ButtonManager
+setInterval(manager.find_zombie_buttons, 500)
+setInterval(manager.find_buttons, 500)
