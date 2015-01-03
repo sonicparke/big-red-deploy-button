@@ -45,6 +45,7 @@ class ButtonManager
   buttons: {}
 
   find_buttons: =>
+    BigRedButton.resetDevices()
     for i in [0...BigRedButton.deviceCount()]
       try
         button = new BigRedButton.BigRedButton(i)
