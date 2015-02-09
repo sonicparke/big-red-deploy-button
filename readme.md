@@ -4,6 +4,8 @@ Now your [Dream Cheeky 902 Big Red Button](http://www.amazon.com/dp/B004D18MCK/r
 
 ## Setup
 
+First run `npm install`.
+
 Copy the `config.json.sample` file to `config.json` and fill it out. If a message is blank, no message will be sent when that event happens.
 
 Now run `coffee src/index.coffee` to get it running!
