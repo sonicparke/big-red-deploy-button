@@ -10,6 +10,8 @@ Modify this code to send the following terminal command to lock computer:
 
 from here: http://osxdaily.com/2012/03/30/lock-mac-desktop-command-line/
 
+or possibly just start screensaver: http://linuxmacwinstuff.blogspot.com/2012/08/start-mac-os-x-screensaver-from-command.html
+
 ## Setup
 
 First run `npm install`.
