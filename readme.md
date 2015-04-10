@@ -8,6 +8,8 @@ Modify this code to send the following terminal command to lock computer:
 /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend
 ```
 
+from here: http://osxdaily.com/2012/03/30/lock-mac-desktop-command-line/
+
 ## Setup
 
 First run `npm install`.
