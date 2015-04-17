@@ -7,12 +7,12 @@
     <string>com.bigred.button</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/bin/button</string>
+        <string>/Users/bmcalister/Documents/DEV/big-red-deploy-button/bin/button</string>
     </array>
     <key>StandardErrorPath</key>
-    <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/logs/error.log</string>
+    <string>/Users/bmcalister/Documents/DEV/big-red-deploy-button/logs/error.log</string>
     <key>StandardOutPath</key>
-    <string>/Users/bschmeisser/sites/devup/apps/big-red-deploy-button/logs/access.log</string>
+    <string>/Users/bmcalister/Documents/DEV/big-red-deploy-button/logs/access.log</string>
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>

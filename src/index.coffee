@@ -1,24 +1,7 @@
 BigRedButton = require("BigRedButtonNodeHID")
 request = require("request")
 fs = require('fs')
-
-class HipChat
-
-  @data: ->
-    JSON.parse(fs.readFileSync("#{__dirname}/../config.json"))
-
-  @send: (message, callback) ->
-    console.log {message}
-    request HipChat.options(message), (error, response, body) ->
-      callback(not error and not body)
-
-  @options: (message) ->
-    uri: "https://api.hipchat.com/v2/room/#{@data().room}/notification?auth_token=#{@data().auth_token}"
-    method: "POST"
-    json:
-      message_format: "text"
-      message: message
-      notify: true
+shell = require('shelljs')
 
 class Button
 
@@ -33,9 +16,8 @@ class Button
     JSON.parse(fs.readFileSync("#{__dirname}/../config.json"))
 
   action: (type) ->
-    if message = @data().messages[type]
-      HipChat.send message, (status) ->
-        console.log {status}
+    if type == 'buttonReleased'
+      shell.exec('open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app', {silent:true})
 
   dead: ->
     !@raw.interval
